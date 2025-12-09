@@ -1,0 +1,581 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: 'Courier New', Courier, monospace; /* A more rigid, military-like font */
+    line-height: 1.6;
+    background-color: #2b2b2b; /* Dark background to give a more tactical vibe */
+    color: #e4e4e4; /* Lighter text for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Header */
+header {
+    background-color: #1c1c1c; /* Darker military gray */
+    color: #e4e4e4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #c1c1c1; /* Subtle line to separate header */
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4d9d52; /* Olive green for a military feel */
+    display: flex;
+    align-items: center;
+}
+
+/* Add animation styles for the typing effect */
+header .logo .typed-text {
+    display: inline-block;
+    border-right: 3px solid #1c1c1c; /* White cursor effect */
+    padding-right: 5px;
+    margin-left: 10px;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 30px; /* Adjust based on your preference */
+    animation: typing 3s steps(20, end) 1s forwards, blink 0.75s step-end 1;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 9em; /* Adjust based on the length of your text */
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #e4e4e4;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase; /* Military vibe */
+    letter-spacing: 1px; /* Adds strength to the typography */
+}
+
+header nav ul li a:hover {
+    color: #4d9d52; /* Olive green on hover for a tactical look */
+}
+
+/* Centering the encryption section */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Encryption and Decryption Section */
+#encryption-decryption {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Core Modules Section */
+#overview {
+    padding: 50px 20px;
+    background-color: #383838; /* A darker background for sections */
+    text-align: center;
+}
+
+#overview h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #4d9d52; /* Olive green for headers */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.module-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.module {
+    background-color: #1c1c1c;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    transition: transform 0.3s ease;
+}
+
+.module:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+.module img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.module h3 {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+.module p {
+    font-size: 1.1em;
+    color: #e4e4e4;
+    margin-top: 10px;
+}
+
+.module .btn {
+    background-color: #4d9d52; /* Olive green */
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #2c6b36; /* Darker green border */
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.module .btn:hover {
+    background-color: #3b7a3f; /* Darker green */
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #383838;
+    text-align: center;
+}
+
+.about h2 {
+    color: #4d9d52; /* Olive green for section headers */
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about p {
+    font-size: 18px;
+    color: #e4e4e4;
+}
+
+/* Footer - Positioned at Downside (Not Fixed) */
+footer {
+    background-color: #1c1c1c; /* Dark gray */
+    color: #e4e4e4;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #c1c1c1; /* Adds some separation from main content */
+    margin-top: auto; /* Push footer to the bottom of the content */
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #e4e4e4;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #4d9d52; /* Olive green */
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #2c6b36; /* Dark green border */
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b7a3f; /* Darker green */
+}
+
+/* Form Styles (For Login/Signup) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #1c1c1c;
+    color: #e4e4e4;
+    border: 2px solid #4d9d52; /* Olive green border */
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4d9d52;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    background-color: #3b7a3f; /* Slightly darker green */
+}
+
+/* Result Text */
+.result {
+    font-size: 1.5em;
+    color: #4d9d52; /* Olive green for result text */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Content Section for Interactive Pages */
+.content {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #383838;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1; /* Allow content to grow and push footer down */
+}
+
+.content h1 {
+    font-size: 32px;
+    color: #4d9d52;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #4d9d52;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Game Styles for Interactive Elements */
+#game {
+    margin-top: 20px;
+}
+
+.event, .option, .item {
+    padding: 10px;
+    margin: 5px;
+    background: #1c1c1c;
+    border: 2px solid #4d9d52;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.event:hover, .option:hover, .item:hover {
+    background: #4d9d52;
+    color: #fff;
+}
+
+.correct, .matched {
+    background: #4d9d52;
+    color: #fff;
+}
+
+.incorrect {
+    background: #ff0000;
+    color: #fff;
+}
+
+.event {
+    cursor: move;
+}
+
+#sortable {
+    min-height: 150px;
+}
+
+.column {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#equipment-img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid #4d9d52;
+}
+
+/* Score and Progress for Enhanced Interactivity */
+#score, #progress {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #4d9d52;
+}
+
+.progress-bar {
+    width: 100%;
+    background: #1c1c1c;
+    border: 2px solid #4d9d52;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #4d9d52;
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+/* Responsive Styles for Mobile and Smaller Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero .cta button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Stack the modules on smaller screens */
+    .module-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .module {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Core Modules Section for Encrypted Messaging */
+    #encryption-options {
+        padding: 50px 20px;
+        background-color: #383838; /* A darker background for sections */
+        text-align: center;
+    }
+
+    #encryption-options h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #4d9d52; /* Olive green for headers */
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /* Responsive adjustments for interactive elements */
+    .content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #equipment-img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .event, .option, .item {
+        width: 100%;
+        display: block;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .module .btn {
+        width: 100%;
+        padding: 8px;
+    }
+}
+/* Welcome Screen */
+.welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.welcome-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.welcome-screen h1 {
+  color: #4d9d52;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.modules-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.modules {
+    background-color: #1c1c1c;
+    padding: 20px;
+    margin: 20px;
+    margin-left:560px ;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    transition: transform 0.3s ease;
+}
+
+.modules:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+}
+
+.modules img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.modules h3 {
+    font-size: 1.6em;
+    margin-top: 15px;
+}
+
+.modules p {
+    font-size: 1.1em;
+    color: #e4e4e4;
+    margin-top: 10px;
+}
+
+.modules .btn {
+    background-color: #4d9d52; /* Olive green */
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #2c6b36; /* Darker green border */
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.modules .btn:hover {
+    background-color: #3b7a3f; /* Darker green */
+}
